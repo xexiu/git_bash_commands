@@ -42,7 +42,7 @@ $ git-pullrq "this is my commit message" -m
 ### <a name="jira"></a> Jira Tickets
 > If your branch starts with: PRO-1234, GOL-1234, CUS-1234 or any other word followed by "-" then a number
 > the commit made after you start the pull request (git-pullrq "commit message") will have the start name of the branch in
-> order to be more specific when making commints for a ticket that you have in Jira.
+> order to be more specific when making commits for a ticket that you have in Jira.
 
 For example:
 
