@@ -67,3 +67,7 @@ $ git checkout -b "CUS-3242/mybranch"
 ### Screenshots
 
 ![image1](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.20.42.png)
+![image2](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.21.22.png)
+![image3](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.22.11.png)
+![image4](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.22.19.png)
+![image5](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.22.41.png)
