@@ -63,3 +63,7 @@ $ git checkout -b "CUS-3242/mybranch"
 
 - You can add an alias on your `bash_profile` if you need. For example: `alias gpr='git-pullrq'`
 - If you wish to have sound and more visual effects then install <a href="https://github.com/julienXX/terminal-notifier" target="_blank">terminal notifier</a>
+
+### Screenshots
+
+![image1](https://raw.githubusercontent.com/xexiu/git_bash_commands/master/screenshots/Captura%20de%20pantalla%202017-02-21%20a%20las%2013.20.42.png)
