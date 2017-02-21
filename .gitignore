@@ -1,6 +1,7 @@
 *.
 *~
 *.apk
+.gitignore
 .DS_Store
 .project
 .settings
