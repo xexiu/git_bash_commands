@@ -23,6 +23,22 @@ $ sudo cp ~/Desktop/git_bash_commands/git-pullrq /opt/local/bin
 
 - Refresh terminal or close/open it again.
 
+### How to
+
+- create new branch.
+- Start working on it like normally.
+- After you finish, make:
+
+```sh
+$ git-pullrq "this is my commit message"
+```
+
+- Optional: add "-m" to checkout directly master after you make the pull request.
+
+```sh
+$ git-pullrq "this is my commit message" -m
+``
+
 ### <a name="jira"></a> Jira Tickets
 > If your branch starts with: PRO-1234, GOL-1234, CUS-1234 or any other word followed by "-" then a number
 > the commit/s made after will have the start name of the branch in
