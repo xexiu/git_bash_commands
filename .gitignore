@@ -1,9 +1,0 @@
-*.
-*~
-*.apk
-.gitignore
-.DS_Store
-.project
-.settings
-.classpath
-.metadata
