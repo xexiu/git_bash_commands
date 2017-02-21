@@ -7,7 +7,7 @@ Description:
 
 ### Features
 
-- Extends <a href="https://hub.github.com/ target="_blank">hub</a> pull request feature.
+- Extends <a href="https://hub.github.com/" target="_blank">hub</a> pull request feature.
 - Automatically creates a pull request and checksout master (optional).
 - Perfect if your working with Jira tickets and auto transition between tasks. [take me to the details](#jira)
 - If your are on branch master, it will abort mission, so no fears.
