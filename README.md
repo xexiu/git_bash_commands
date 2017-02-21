@@ -37,7 +37,7 @@ $ git-pullrq "this is my commit message"
 
 ```sh
 $ git-pullrq "this is my commit message" -m
-``
+```
 
 ### <a name="jira"></a> Jira Tickets
 > If your branch starts with: PRO-1234, GOL-1234, CUS-1234 or any other word followed by "-" then a number
