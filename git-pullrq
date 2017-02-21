@@ -1,0 +1,58 @@
+#!/bin/sh
+repo=`git remote -v | grep push | head -n 1 | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
+branch=`git rev-parse --abbrev-ref HEAD`
+
+function getMessage(){
+  for x in "$*";
+  do
+    clean=${x//$1/}
+    message=${clean//$2/}
+    if [ "$finalParam" == "-m" ]
+      then
+      message=${message//$finalParam/}
+    else
+      message=${clean//$2/}
+    fi
+  done
+}
+
+function createPullRequest(){
+  local message;
+  local finalParam=${@:$#}
+  local ticket=`expr "$1" : '^\([a-zA-Z]*[-]*[0-9]*\)'`
+
+  getMessage $*
+
+  git add -A && git commit -m "[$ticket] - $message"
+  git push -u origin "$1"
+
+  if [ -n "$3" ];
+    then
+    hub pull-request -m "[$ticket] - $message"
+  else
+    hub pull-request -m "$ticket"
+  fi
+
+  #echo "Param 1: $1, Param 2: $2, Param 3: $3, Param 4: ${@:$#}"
+
+  if [ "$finalParam" == "-m" ]
+    then
+    git checkout master
+  fi
+
+  open https://github.com/$2/pull/$1
+}
+
+if [ "$branch" == "master" ]
+  then
+  echo "Current branch: $branch - Aborting mission!!!" | terminal-notifier -sound default
+else
+  if git rev-parse @{u} > /dev/null 2>&1
+    then
+    echo "Has an upstream branch: $branch"
+    createPullRequest $branch $repo $1 $2
+  else
+    echo "Has no upstream branch: $branch"
+    createPullRequest $branch $repo $1 $2
+  fi
+fi
