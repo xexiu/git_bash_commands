@@ -23,7 +23,7 @@ function createPullRequest(){
 
   getMessage $*
 
-  git add -A && git commit -m "[$ticket] - $message"
+  git add -u && git commit -m "[$ticket] - $message"
   git push -u origin "$1"
 
   if [ -n "$3" ];
