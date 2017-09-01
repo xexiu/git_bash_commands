@@ -9,9 +9,12 @@ function getMessage(){
     message=${clean//$2/}
     if [ "$finalParam" == "-m" ]
       then
-      message=${message//$finalParam/}
+      message="["$ticket"] - "${message//$finalParam/}
+    elif [[ -z "${message// }" ]]
+      then
+      message=$branch
     else
-      message=${clean//$2/}
+      message="["$ticket"] - "${clean//$2/}
     fi
   done
 }
@@ -23,15 +26,10 @@ function createPullRequest(){
 
   getMessage $*
 
-  git add -u && git commit -m "[$ticket] - $message"
+  git add -u && git commit -m "$message"
   git push -u origin "$1"
 
-  if [ -n "$3" ];
-    then
-    hub pull-request -m "[$ticket] - $message"
-  else
-    hub pull-request -m "$ticket"
-  fi
+  hub pull-request -m "$message"
 
   #echo "Param 1: $1, Param 2: $2, Param 3: $3, Param 4: ${@:$#}"
 
