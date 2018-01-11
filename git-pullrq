@@ -1,5 +1,5 @@
 #!/bin/sh
-repo=`git remote -v | grep push | head -n 1 | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
+repo=`git remote -v | grep push | head -n 1 | sed -e "s/.*github.com[:/]\(.*\)\/\(.*\)\\ (push)/\1\/\2/"| sed -e "s/\(.*\).git/\0/"`
 branch=`git rev-parse --abbrev-ref HEAD`
 
 function getMessage(){
